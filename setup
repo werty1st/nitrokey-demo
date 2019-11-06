@@ -1,0 +1,45 @@
+
+sudo apt-get install  libccid scdaemon gpg python3-usb
+
+gpg --card-status | grep Version
+
+gpg --card-edit
+
+Admin PIN orig: 12345678
+Admin PIN neu : 87654321   #PIN changed.
+
+#GEHT NUR MIT ZERT!
+PIN orig: 123456
+PIN neu : 654321
+RESET: 88888888
+
+GENERATE (setzt pin auf default)
+
+gpg --card-edit --expert
+
+
+
+PoC
+===
+
+echo "tim@web.de" | gpg --encrypt --armor --recipient adams.r+test@zdf.de > file.enc
+CRYPTTXT=$(echo "tim@web.de" | gpg --encrypt --armor --recipient adams.r+test@zdf.de)
+gpg --decrypt < file.enc
+echo "$CRYPTTXT" | gpg --decrypt --passphrase 654321
+
+DB:
+ID  HASH    EMAIL_CRYPTED
+0   X345    kljsdfOPK30i4
+
+hash(tim@web.de) => X345
+mail_crypted = db_get(HASH=X345)
+
+gpg decrypt kljsdfOPK30i4
+
+
+apt install libgpg-error-dev libassuan-dev 
+apt install gnupg2 gnupg-agent gnupg-pkcs11-scd gnupg-pkcs11-scd-proxy
+tar xvf gpgme-1.13.1.tar.bz2
+cd gpgme-1.13.1/
+
+libgpgme11 libqgpgme7 libqgpgme1

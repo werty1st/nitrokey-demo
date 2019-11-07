@@ -62,7 +62,8 @@ location:
 
 libgpgme11 libqgpgme7 libqgpgme1
 
-
+https://www.gnupg.org/documentation/manuals/gpgme/
+https://github.com/mailvelope/gpgmejs
 {
 	"name": "gpgmejson",
 	"description": "This is a test application for gpgme.js",
@@ -70,3 +71,10 @@ libgpgme11 libqgpgme7 libqgpgme1
 	"type": "stdio",
 	"allowed_origins": ["chrome-extension://kajibbejlbohfaggdiogboambcijhkke/"]
 }
+
+python
+https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gpgme.git;a=tree;f=lang/python/examples;hb=refs/heads/master
+https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gpgme.git;a=tree;f=lang/python/examples/howto;h=7f77be8d273962cfd2a2cf4d077d00e730d2db7f;hb=refs/heads/master
+Note that the package python-gpgme is no longer in Ubuntu 18.04 repository. The successor is python3-gpg
+apt install python3-gpg
+

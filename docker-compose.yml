@@ -1,0 +1,12 @@
+version: "2.3"
+
+
+
+services:
+
+  gpgme:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    volumes:
+        - .:/mnt2/

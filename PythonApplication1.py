@@ -29,9 +29,9 @@ with open("secret.txt.enc", "rb") as file:
     msg_enc = file.read()
     file.close()
     msg_decrypted = gpg.decrypt(msg_enc, always_trust=True)
-    if msg_decrypted.stderr:
+    if not msg_decrypted.ok:
         print(msg_decrypted.stderr)
     else:
+        print(msg_decrypted.status)    
+        print()
         print(msg_decrypted)
-    
-    print(msg_decrypted)

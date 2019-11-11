@@ -1,12 +1,9 @@
 import gnupg
 #https://pythonhosted.org/python-gnupg/
 
-#gpg = gnupg.GPG(gpgbinary="C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe", use_agent=True)
-#gpg = gnupg.GPG(gnupghome="/tmp", use_agent=False) #doesnt ask for keycard password
 gpg = gnupg.GPG() #dont store pin
 
 #import key
-#publicKey = open("key.pub", "r").read()
 with open("key.pub", "r") as file:
     publicKey = file.read()
     file.close()

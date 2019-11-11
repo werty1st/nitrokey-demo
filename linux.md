@@ -1,3 +1,19 @@
+# Linux Version
+
+## Python
+
+Install gpg module
+
+```bash
+pip3 install python-gnupg
+```
+
+Run code
+
+```bash
+python DemoApplication_Linux.py
+
+['Ronny Adams <         >'] ['138AF6465CE1EA53F634DA7F71C65BB4BDC009B2']
 -----BEGIN PGP MESSAGE-----
 
 hQEMA1U9vJL0xsSlAQf/cq7xvJP58+euisq3fDoGQA8EyapjoIUNoRl/DnI9wrb3
@@ -10,3 +26,16 @@ V9qFnpJURNTQrIb7X2yPXKEmkMtyHhKvytEglbrQdFs7JHQsI+jT26660CrBAO2L
 6rmXzoaxwSwIork=
 =jJBa
 -----END PGP MESSAGE-----
+```
+
+Enter PIN
+
+![Enter Pin](img/linux_pin.png "Logo Title Text 1")
+
+Result
+
+```bash
+decryption ok
+
+Das ist geheim.
+```
